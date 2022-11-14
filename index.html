@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cellphone Calculator</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- JS -->
+    <script src="js/app.js" defer></script>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo">Calculator App</div>
+    </header>
+
+    <main class="calculator-app">
+      <div class="calculator">
+        <div class="calculator__head">
+          <div class="calculator__header">
+            <input type="text" maxlength="15" class="calculator__input" />
+
+            <div class="calculator__result">123</div>
+          </div>
+
+          <div class="calculator__bar">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+
+            <i class="fas fa-backspace"></i>
+          </div>
+        </div>
+
+        <div class="calculator__body">
+          <div class="calculator_row">
+            <button tabindex="2" class="btn btn--clr-red">C</button>
+            <button tabindex="2" class="btn btn--clr-green">()</button>
+            <button tabindex="2" class="btn btn--clr-green">%</button>
+            <button tabindex="2" class="btn btn--clr-green">:</button>
+          </div>
+
+          <div class="calculator_row">
+            <button class="btn">7</button>
+            <button class="btn">8</button>
+            <button class="btn">9</button>
+            <button tabindex="2" class="btn btn--clr-green">X</button>
+          </div>
+
+          <div class="calculator_row">
+            <button class="btn">4</button>
+            <button class="btn">5</button>
+            <button class="btn">6</button>
+            <button tabindex="2" class="btn btn--clr-green">-</button>
+          </div>
+
+          <div class="calculator_row">
+            <button class="btn">1</button>
+            <button class="btn">2</button>
+            <button class="btn">3</button>
+            <button tabindex="2" class="btn btn--clr-green">+</button>
+          </div>
+
+          <div class="calculator_row">
+            <button class="btn">+/-</button>
+            <button class="btn">0</button>
+            <button class="btn">.</button>
+            <button class="btn btn--fill-green">=</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,149 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #000;
+  --primary-color: rgb(23, 182, 5);
+  --secondary-color: rgb(56, 56, 56);
+  --red-color: rgb(249, 129, 129);
+
+  --header-height: 70px;
+
+  --fs-main: 1rem;
+  --fs-large: 1.5rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: var(--bg-color);
+  color: #fff;
+
+  font-size: var(--fs-main);
+}
+
+/* btns */
+
+.btn {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  /* padding: 1.25rem; */
+  height: 65px;
+  width: 65px;
+
+  background: var(--secondary-color);
+  color: #fff;
+  font-size: var(--fs-large);
+  border-radius: 50%;
+}
+.btn:hover,
+.btn:focus {
+  background: #666;
+}
+
+.btn--clr-red {
+  color: var(--red-color);
+}
+.btn--clr-green {
+  color: var(--primary-color);
+}
+.btn--fill-green {
+  font-size: 2rem;
+  font-weight: bold;
+  background: var(--primary-color);
+}
+.btn--fill-green:hover,
+.btn--fill-green:focus {
+  background: rgb(42, 250, 52);
+}
+
+/* Main Styles */
+
+/* Header */
+
+.header {
+  height: var(--header-height);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__logo {
+  font-size: 3rem;
+}
+
+/* Calculator */
+
+.calculator-app {
+  width: 100%;
+  height: calc(100vh - var(--header-height));
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Calculator App */
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1.5rem;
+}
+
+.calculator__head {
+  border-bottom: 1px solid var(--secondary-color);
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.calculator__header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  height: 100px;
+}
+.calculator__input {
+  outline: none;
+  border: none;
+  background: none;
+  color: #fff;
+  font-size: var(--fs-large);
+  text-align: right;
+}
+.calculator__result {
+  font-size: 1.25rem;
+  color: #999;
+}
+
+.calculator__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
+}
+
+.calculator__body {
+  --flex-gap: 0.5rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--flex-gap);
+}
+.calculator__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: var(--flex-gap);
+}
