@@ -62,6 +62,9 @@ body {
   background: rgb(42, 250, 52);
 }
 
+.pointer {
+  cursor: pointer;
+}
 /* Main Styles */
 
 /* Header */

@@ -30,52 +30,95 @@
       <div class="calculator">
         <div class="calculator__head">
           <div class="calculator__header">
-            <input type="text" maxlength="15" class="calculator__input" />
+            <input
+              type="text"
+              maxlength="15"
+              class="calculator__input"
+              data-input
+            />
 
-            <div class="calculator__result">123</div>
+            <div class="calculator__result" data-result></div>
           </div>
 
           <div class="calculator__bar">
-            <i class="fa-solid fa-clock-rotate-left"></i>
+            <i class="fa-solid fa-clock-rotate-left pointer" data-history></i>
 
-            <i class="fas fa-backspace"></i>
+            <i class="fas fa-backspace pointer" data-backspace></i>
           </div>
         </div>
 
         <div class="calculator__body">
           <div class="calculator_row">
-            <button tabindex="2" class="btn btn--clr-red">C</button>
-            <button tabindex="2" class="btn btn--clr-green">()</button>
-            <button tabindex="2" class="btn btn--clr-green">%</button>
-            <button tabindex="2" class="btn btn--clr-green">:</button>
+            <button tabindex="2" class="btn btn--clr-red" data-type="clear">
+              C
+            </button>
+            <button
+              tabindex="2"
+              class="btn btn--clr-green"
+              data-type="parentheses"
+            >
+              ()
+            </button>
+            <button
+              tabindex="2"
+              class="btn btn--clr-green"
+              data-type="percent"
+            >
+              %
+            </button>
+            <button
+              tabindex="2"
+              class="btn btn--clr-green"
+              data-type="operator"
+            >
+              /
+            </button>
           </div>
 
           <div class="calculator_row">
-            <button class="btn">7</button>
-            <button class="btn">8</button>
-            <button class="btn">9</button>
-            <button tabindex="2" class="btn btn--clr-green">X</button>
+            <button class="btn" data-type="number">7</button>
+            <button class="btn" data-type="number">8</button>
+            <button class="btn" data-type="number">9</button>
+            <button
+              tabindex="2"
+              class="btn btn--clr-green"
+              data-type="operator"
+            >
+              *
+            </button>
           </div>
 
           <div class="calculator_row">
-            <button class="btn">4</button>
-            <button class="btn">5</button>
-            <button class="btn">6</button>
-            <button tabindex="2" class="btn btn--clr-green">-</button>
+            <button class="btn" data-type="number">4</button>
+            <button class="btn" data-type="number">5</button>
+            <button class="btn" data-type="number">6</button>
+            <button
+              tabindex="2"
+              class="btn btn--clr-green"
+              data-type="operator"
+            >
+              -
+            </button>
           </div>
 
           <div class="calculator_row">
-            <button class="btn">1</button>
-            <button class="btn">2</button>
-            <button class="btn">3</button>
-            <button tabindex="2" class="btn btn--clr-green">+</button>
+            <button class="btn" data-type="number">1</button>
+            <button class="btn" data-type="number">2</button>
+            <button class="btn" data-type="number">3</button>
+            <button
+              tabindex="2"
+              class="btn btn--clr-green"
+              data-type="operator"
+            >
+              +
+            </button>
           </div>
 
           <div class="calculator_row">
-            <button class="btn">+/-</button>
-            <button class="btn">0</button>
-            <button class="btn">.</button>
-            <button class="btn btn--fill-green">=</button>
+            <button class="btn">+/-</b][utton>
+            <button class="btn" data-type="number">0</button>
+            <button class="btn" data-type="decimal">.</button>
+            <button class="btn btn--fill-green" data-type="result">=</button>
           </div>
         </div>
       </div>
