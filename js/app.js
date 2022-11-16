@@ -6,6 +6,7 @@ const btns = document.querySelectorAll(".btn");
 
 let operation = null;
 let result = null;
+let side = 0;
 
 // console.log(operationInput, btns);
 
@@ -22,6 +23,7 @@ btns.forEach((btn) => {
       operation = operationInput.value;
     }
     if (type === "clear") {
+      side = 0;
       operationInput.value = "";
       resultInput.innerText = "";
       operation = operationInput.value;
@@ -29,6 +31,33 @@ btns.forEach((btn) => {
     if (type === "operator") {
       operationInput.value += btn.innerText;
       operation = operationInput.value;
+    }
+    if (type === "parentheses") {
+      if (side === 0) {
+        let last = operationInput.value.slice(-1);
+        console.log(last);
+        if ("1234567890".includes(last) && last !== "") {
+          operationInput.value += "*(";
+        } else {
+          operationInput.value += "(";
+        }
+        side = 1;
+      } else if (side === 1) {
+        operationInput.value += ")";
+        side = 0;
+      }
+
+      operation = operationInput.value;
+    }
+    if (type === "percent") {
+      // let value = operationInput.value;
+      // let array = [];
+      // array = value.split("+");
+      // array = array.split("-");
+      // array = array.split("*");
+      // array = array.split("/");
+      // console.log(array);
+      // operation = value;
     }
 
     if (type === "result") {
@@ -55,4 +84,8 @@ backspace.addEventListener("click", (e) => {
   value = value.substring(0, value.length - 1);
   operationInput.value = value;
   operation = value;
+
+  if (value == "") {
+    side = 0;
+  }
 });
